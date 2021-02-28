@@ -1,0 +1,57 @@
+{
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode='production'",
+    "dev": "webpack serve --mode='development'",
+    "format": "yarn format:js && yarn format:scss",
+    "format:js": "prettier --write './src/**/*.js'",
+    "format:scss": "prettier --write './src/**/*.scss'",
+    "lint": "eslint './src/**/*.js'"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.0",
+    "eslint": "^7.21.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-webpack-plugin": "^2.5.2",
+    "html-webpack-plugin": "^5.2.0",
+    "husky": "^5.1.1",
+    "lint-staged": "^10.5.4",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.6",
+    "postcss-loader": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.js": [
+      "yarn lint"
+    ],
+    "./src/**/*{.scss,.js}": [
+      "prettier --write"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
