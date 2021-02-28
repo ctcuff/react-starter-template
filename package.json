@@ -1,5 +1,10 @@
 {
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "keywords": [],
+  "author": "",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode='production'",
