@@ -10,9 +10,9 @@
     "build": "webpack --config webpack.config.js --mode='production'",
     "dev": "webpack serve --mode='development'",
     "format": "yarn format:js && yarn format:scss",
-    "format:js": "prettier --write './src/**/*.js'",
+    "format:js": "prettier --write './src/**/*{.js,.jsx}'",
     "format:scss": "prettier --write './src/**/*.scss'",
-    "lint": "eslint './src/**/*.js'"
+    "lint": "eslint './src/**/*{.js,.jsx}'"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -49,10 +49,10 @@
     }
   },
   "lint-staged": {
-    "./src/**/*.js": [
+    "./src/**/*{.js,.jsx}": [
       "yarn lint"
     ],
-    "./src/**/*{.scss,.js}": [
+    "./src/**/*{.scss,.js,.jsx}": [
       "prettier --write"
     ]
   },
