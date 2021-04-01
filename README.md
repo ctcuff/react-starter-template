@@ -15,10 +15,11 @@
 
 ## Usage with git clone
 The easy way to use this template is to just click the <kbd>Use this template button</kbd>, but if you wan't to clone this and edit the files before uploading it to GitHub, follow these steps:
-1. `git clone https://github.com/ctcuff/react-starter-template.git && cd react-starter-template`
-2. `rm -rf .git` <small>Remove starter version control</small>
-3. `git init` <small>Initialize your own git repo</small>
-4. `yarn` (or `npm install`) <small>Install dependencies</small>
+1. `mkdir some_folder && cd $_`
+2. `git clone https://github.com/ctcuff/react-starter-template.git .`
+3. `rm -rf .git` <small>Remove starter version control</small>
+4. `git init` <small>Initialize your own git repo</small>
+5. `yarn` (or `npm install`) <small>Install dependencies</small>
 
 From there, you probably want to rename the `react-starter-template` folder to whatever the name of your new project is. Don't forget to rename it in [package.json](https://github.com/ctcuff/react-starter-template/blob/master/package.json#L2) too!
 
