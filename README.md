@@ -30,6 +30,7 @@ In case you were wondering why there's so much stuff in `package.json`
 
 ### devDependencies
 - `@babel/core`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`: Used to transpile JS/React files and allows JSX syntax
+- `@babel/plugin-transform-runtime`: Allows the use of `async` and `await`
 - `autoprefixer`, `postcss`, `node-sass`: Automagically adds vendor prefixes and transpiles future CSS syntax. node-sass allows SCSS to be used.
 - `css-loader`, `postcss-loader`, `sass-loader`, `style-loader`: Allows CSS and SCSS files to be imported from JS files. Also allows webpack to process CSS with postcss.
 - `eslint`, `eslint-plugin-react`, `prettier`: Linting and formatting
