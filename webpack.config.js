@@ -7,7 +7,7 @@ const { HotModuleReplacementPlugin } = require('webpack')
 module.exports = {
   plugins: [
     new ESLintPlugin({
-      extensions: ['js', 'jsx']
+      extensions: ['ts', 'tsx', 'js', 'jsx']
     }),
     new HotModuleReplacementPlugin({
       logLevel: 'warning'
@@ -36,7 +36,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx?)$/,
+        test: /\.(ts|js)x?$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -58,6 +58,6 @@ module.exports = {
     // Files without an extension will be treated as one of these.
     // Note that webpack will go from left to right until the proper
     // extension is found.
-    extensions: ['.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   }
 }
