@@ -6,7 +6,9 @@ const { HotModuleReplacementPlugin } = require('webpack')
 /** @type {import('webpack').Configuration} */
 module.exports = {
   plugins: [
-    new ESLintPlugin(),
+    new ESLintPlugin({
+      extensions: ['js', 'jsx']
+    }),
     new HotModuleReplacementPlugin({
       logLevel: 'warning'
     }),
