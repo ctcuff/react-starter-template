@@ -34,7 +34,7 @@ In case you were wondering why there's so much stuff in `package.json`
 - `@babel/plugin-transform-runtime`: Allows the use of `async` and `await`
 - `autoprefixer`, `postcss`, `node-sass`: Automagically adds vendor prefixes and transpiles future CSS syntax. node-sass allows SCSS to be used.
 - `css-loader`, `postcss-loader`, `sass-loader`, `style-loader`: Allows CSS and SCSS files to be imported from JS files. Also allows webpack to process CSS with postcss.
-- `eslint`, `eslint-plugin-react`, `prettier`: Linting and formatting
+- `eslint` (and other eslint plugins), `prettier`: Linting and formatting
 - `husky`, `lint-staged`: Runs custom hooks like linting and formatting after commits
 - `babel-eslint`, `eslint-webpack-plugin`: Allows webpack to throw errors and display warnings in the console if eslint rules are broken
 - `html-webpack-plugin`: Offers customization over webpack's HTML entry point

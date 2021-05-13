@@ -18,14 +18,14 @@ module.exports = {
     })
   ],
   target: 'web',
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
-    open: true,
+    open: false,
     port: 9000,
     hot: true,
     useLocalIp: true,
@@ -51,6 +51,11 @@ module.exports = {
         // new rule and use asset/inline for (data URI) or asset/source (for code).
         test: /\.(png|jpg|svg)/,
         type: 'asset/resource'
+      },
+      {
+        // Using asset/source will allow these file types to be imported as text.
+        test: /\.(txt|md|fs|vs|frag|vert|glsl)/,
+        type: 'asset/source'
       }
     ]
   },
