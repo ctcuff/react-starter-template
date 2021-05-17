@@ -1,9 +1,12 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
   "env": {
     "browser": true,
-    "es6": true,
+    "es2021": true,
     "node": true,
     "jest": true
   },
@@ -11,7 +14,6 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "settings": {
@@ -19,16 +21,18 @@
       "version": "detect"
     }
   },
+  "ignorePatterns": ["dist/**/*", "src/__tests__/**/*", "src/__mocks__/**/*"],
   "rules": {
+    "indent": ["error", 2],
     "semi": ["warn", "never"],
     "no-console": "warn",
-    "no-unused-vars": ["warn", { "args": "after-used" }],
+    "no-unused-vars": ["error", { "args": "after-used" }],
     "no-mixed-spaces-and-tabs": "error",
     "no-trailing-spaces": "error",
     "no-var": "error",
     "object-curly-spacing": ["error", "always"],
     "no-alert": "error",
-    "comma-dangle": "warn",
+    "comma-dangle": ["error", "never"],
     "react/jsx-curly-spacing": [
       "error",
       {
@@ -38,16 +42,18 @@
         }
       }
     ],
-    "react/prop-types": 2
-  },
-  // Configuration specifically for TypeScript. This allows eslint to work
-  // with different rules for js/jsx and ts/tsx files
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@typescript-eslint/recommended"],
-      "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint"]
-    }
-  ]
+    "react/sort-comp": "error",
+    "react/button-has-type": "error",
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "always"
+      }
+    ],
+    "react/jsx-wrap-multilines": "error",
+    "react/self-closing-comp": "error",
+    "react/no-unused-state": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error"
+  }
 }

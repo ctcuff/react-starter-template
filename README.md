@@ -1,4 +1,4 @@
-# Yet Another React App
+# Yet Another React App But It's TypeScript
 
 `create-react-app` doesn't always cut it, but I can never remember how to set up a React project from scratch... This repo contains some super minimal boilerplate code for a starter React project. This template uses `yarn` instead of `npm`, but if you'd like to use `npm`, just delete `yarn.lock`.
 

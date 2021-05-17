@@ -10,12 +10,11 @@
     "build": "webpack --config webpack.config.js --mode='production'",
     "dev": "webpack serve --mode='development'",
     "format": "yarn format:js && yarn format:scss",
-    "format:js": "prettier --write './src/**/*{.js,.jsx}'",
+    "format:ts": "prettier --write './src/**/*{.ts,.tsx}'",
     "format:scss": "prettier --write './src/**/*.scss'",
-    "lint": "eslint './src/**/*{.js,.jsx}'"
+    "lint": "eslint './src/**/*{.ts,.tsx}'"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -27,6 +26,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
     "autoprefixer": "^10.2.4",
@@ -56,10 +56,10 @@
     }
   },
   "lint-staged": {
-    "./src/**/*{.js,.jsx}": [
+    "./src/**/*{.ts,.tsx}": [
       "yarn lint"
     ],
-    "./src/**/*{.scss,.js,.jsx}": [
+    "./src/**/*{.scss,.ts,.tsx}": [
       "prettier --write"
     ]
   },

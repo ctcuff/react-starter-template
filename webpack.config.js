@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
@@ -18,14 +19,14 @@ module.exports = {
     })
   ],
   target: 'web',
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
-    open: true,
+    open: false,
     port: 9000,
     hot: true,
     useLocalIp: true,
@@ -39,7 +40,7 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: 'babel-loader'
       },
       {
         test: /\.(css|scss)$/,
@@ -51,6 +52,11 @@ module.exports = {
         // new rule and use asset/inline for (data URI) or asset/source (for code).
         test: /\.(png|jpg|svg)/,
         type: 'asset/resource'
+      },
+      {
+        // Using asset/source will allow these file types to be imported as text.
+        test: /\.(txt|md|fs|vs|frag|vert|glsl)/,
+        type: 'asset/source'
       }
     ]
   },
