@@ -19,12 +19,12 @@
 - `package.json` scripts to format JS and SCSS files and a script to lint JS files
 
 ## Usage with git clone
-The easy way to use this template is to just click the <kbd>Use this template button</kbd>, but if you wan't to clone this and edit the files before uploading it to GitHub, follow these steps:
+The easy way to use this template is to just click the <kbd>Use this template</kbd> button, but if you wan't to clone this and edit the files before uploading it to GitHub, follow these steps:
 1. `mkdir some_folder && cd $_`
 2. `git clone https://github.com/ctcuff/react-starter-template.git .`
-3. `rm -rf .git` <small>Remove starter version control</small>
-4. `git init` <small>Initialize your own git repo</small>
-5. `yarn` (or `npm install`) <small>Install dependencies</small>
+3. `rm -rf .git` (Remove starter version control)
+4. `git init` (Initialize your own git repo)
+5. `yarn` (or `npm install`) (Install dependencies)
 
 From there, you probably want to rename the `react-starter-template` folder to whatever the name of your new project is. Don't forget to rename it in [package.json](https://github.com/ctcuff/react-starter-template/blob/master/package.json#L2) too!
 
