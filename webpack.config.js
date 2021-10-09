@@ -2,16 +2,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
-const { HotModuleReplacementPlugin } = require('webpack')
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
   plugins: [
     new ESLintPlugin({
       extensions: ['ts', 'tsx', 'js', 'jsx']
-    }),
-    new HotModuleReplacementPlugin({
-      logLevel: 'warning'
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
@@ -25,11 +21,12 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
+    static: {
+      directory: path.resolve(__dirname, 'public')
+    },
     open: false,
     port: 9000,
     hot: true,
-    useLocalIp: true,
     // Using 0.0.0.0 allows the project to be accessed by all
     // devices on the same network as the host
     host: '0.0.0.0'
