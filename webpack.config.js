@@ -17,8 +17,8 @@ module.exports = {
   target: 'web',
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: 'index.js'
   },
   devServer: {
     static: {
