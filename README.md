@@ -39,10 +39,11 @@ In case you were wondering why there's so much stuff in `package.json`
 ### devDependencies
 
 - `@babel/core`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`: Used to transpile JS/React files and allows JSX syntax
+- `@babel/preset-typescript` Includes `@babel/plugin-transform-typescript` to add support for types syntax
 - `@babel/plugin-transform-runtime`: Allows the use of `async` and `await`
-- `autoprefixer`, `postcss`, `node-sass`: Automagically adds vendor prefixes and transpiles future CSS syntax. node-sass allows SCSS to be used.
+- `autoprefixer`, `postcss`, `sass`: Automagically adds vendor prefixes and transpiles future CSS syntax. `sass` allows SCSS to be used.
 - `css-loader`, `postcss-loader`, `sass-loader`, `style-loader`: Allows CSS and SCSS files to be imported from JS files. Also allows webpack to process CSS with postcss.
-- `eslint` (and other eslint plugins), `prettier`: Linting and formatting partially based on [Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript)
+- `eslint` (and other eslint plugins), `prettier`: Linting and formatting
 - `husky`, `lint-staged`: Runs custom hooks like linting and formatting before commits
 - `babel-eslint`, `eslint-webpack-plugin`: Allows webpack to throw errors and display warnings in the console if eslint rules are broken
 - `html-webpack-plugin`: Offers customization over webpack's HTML entry point
