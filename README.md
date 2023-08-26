@@ -21,7 +21,7 @@
 In order to use this TypeScript template, you'll need to clone the repo. <kbd>Use this template</kbd> will create a template from the master branch.
 
 1. `mkdir some_folder && cd $_`
-2. `git clone -b typescript https://github.com/ctcuff/react-starter-template.git .`
+2. `git clone https://github.com/ctcuff/react-starter-template.git .`
 3. `rm -rf .git` (Remove starter version control)
 4. `git init` (Initialize your own git repo)
 5. `yarn` (or `npm install`) (Install dependencies)
