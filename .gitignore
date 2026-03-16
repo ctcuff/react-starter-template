@@ -1,3 +1,19 @@
+# Local
+.DS_Store
+*.local
+*.log*
+
+# Dist
+node_modules
+dist/
+
+# Profile
+.rspack-profile-*/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
 logs
 *.log
 npm-debug.log*
@@ -12,8 +28,3 @@ yarn-debug.log*
 /node_modules
 /test/output
 /build
-
-.DS_Store
-.idea
-.vscode
-.netlify

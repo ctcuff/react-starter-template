@@ -1,11 +1,15 @@
-import './style/index.scss'
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './components/App'
+import './style/index.scss';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './components/App';
 
-if (module.hot) {
-  module.hot.accept()
+const rootElement = document.getElementById('root')!;
+
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 }
-
-const root = createRoot(document.getElementById('app')!)
-root.render(<App />)

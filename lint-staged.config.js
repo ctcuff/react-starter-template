@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   './src/**/*{.scss,.js,.jsx,.ts,.tsx}': ['prettier --write'],
   // Compiles all TypeScript without emitting JS files to
   // check for type errors. This is specified in a separate file

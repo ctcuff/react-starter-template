@@ -1,5 +1,3 @@
-import React from 'react'
+const App = () => <div>Hello, World</div>;
 
-const App = (): JSX.Element => <div>Hello, World!</div>
-
-export default App
+export default App;
